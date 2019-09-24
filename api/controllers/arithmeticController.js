@@ -11,12 +11,12 @@ exports.calculate = function(req, res) {
   });
 
   var operations = {
-    'add':      function(a,b) { return a + b },
+    'add':      function(a,b) { return +a + +b },
     'subtract': function(a,b) { return a - b },
     'multiply': function(a,b) { return a * b },
     'divide':   function(a,b) { return a / b },
   };
-
+  //plus signs before each variable are necessary to coerce those variables to their number representations
   // Determine the operation
 
   if (! req.query.operation) {
