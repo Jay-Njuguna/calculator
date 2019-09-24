@@ -16,7 +16,7 @@ exports.calculate = function(req, res) {
     'multiply': function(a,b) { return a * b },
     'divide':   function(a,b) { return a / b },
   };
-
+  //plus signs before each variable are necessary to coerce those variables to their number representations
   // Determine the operation
 
   if (! req.query.operation) {
